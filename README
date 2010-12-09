@@ -1,3 +1,22 @@
+-- Updated to work with redmine 1.0 on rails 2.3.5
+
+INSTALL ubuntu
+
+Install dependencies
+
+$ sudo apt-get install preview-latex-style dvips imagemagick
+
+Clone repository in your redmine plugins dir
+
+$ cd <path to redmine base dir>/vendor/plugins/
+
+$ git clone git://github.com/erikkallen/redmine-wiki_latex_plugin.git
+
+Restart apache or whatever you're using (passenger in this case)
+
+$ touch <path to redmine base dir>/tmp/restart.txt
+
+
 Redmine Wiki Latex-macro plugin will allow Redmines wiki to render
 image from latex code.
  
