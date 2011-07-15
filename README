@@ -4,13 +4,15 @@ INSTALL ubuntu
 
 Install dependencies
 
-$ sudo apt-get install preview-latex-style dvips imagemagick
+$ sudo apt-get install preview-latex-style dvips imagemagick dvipng
 
 Clone repository in your redmine plugins dir
 
 $ cd <path to redmine base dir>/vendor/plugins/
 
 $ git clone git://github.com/erikkallen/redmine-wiki_latex_plugin.git
+
+$ rake rake db:migrate:plugins RAILS_ENV=production
 
 Restart apache or whatever you're using (passenger in this case)
 
