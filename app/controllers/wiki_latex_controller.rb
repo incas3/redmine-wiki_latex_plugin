@@ -12,7 +12,7 @@ class WikiLatexController < ApplicationController
     	render_image
     end
     if (File.exists?(image_file))
-      render :file => image_file, :layout => false, :content_type => 'image/png'
+     send_file image_file
     else
     	render_404
     end
